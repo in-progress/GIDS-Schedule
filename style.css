@@ -1,7 +1,318 @@
+@font-face {
+  font-family: "open_sans";
+  src: url("fonts/open-sans/opensans-regular-webfont.woff2") format("woff2"),
+    url("fonts/open-sans/opensans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "open_sans";
+  src: url("fonts/open-sans/opensans-bold-webfont.woff2") format("woff2"),
+    url("fonts/open-sans/opensans-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+html {
+  font-size: 62.5%;
+}
 table,
 th,
 tr,
 td {
   border: 1px solid grey;
   border-collapse: collapse;
+}
+
+thead {
+  background-color: lightsteelblue;
+}
+
+.container {
+  border: 3px solid lightgrey;
+  border-width: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 50vh;
+  gap: 10px;
+  margin: 1rem;
+}
+
+/*.container {
+  height: 50vh;
+  display: grid;
+  grid-template: repeat(1, 100px) / repeat(5, 100px);
+  grid-template-areas: "dayOne dayOne" "daytwo daytwo" "daythree daythree" "dayfour dayfour";
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
+}*/
+
+.main-heading {
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  color: rgb(5, 43, 63);
+  background: rgb(2, 0, 36);
+  text-shadow: 1px 1px rgb(173, 176, 180);
+  background: linear-gradient(
+    37deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(135, 173, 179, 1) 0%,
+    rgba(121, 136, 162, 1) 0%,
+    rgba(103, 175, 184, 0.43461134453781514) 100%
+  );
+}
+
+/*.container {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-direction: column;
+}*/
+
+.box {
+  height: 5rem;
+  display: grid;
+  padding: 1rem;
+  border: 2px solid lightgray;
+  justify-content: center;
+  align-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+  top: 5rem;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+/*
+.box-one {
+  background-color: rgb(85, 93, 102);
+}
+.box-two {
+  background-color: rgb(100, 109, 121);
+}
+.box-three {
+  background-color: rgb(129, 138, 150);
+}
+.box-four {
+  background-color: rgb(137, 148, 160);
+}
+*/
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.box > a {
+  color: rgb(45, 52, 56);
+}
+/*
+.box-two > a {
+  color: rgb(143, 162, 172);
+}
+.box-three > a {
+  color: rgb(85, 93, 102);
+}
+.box-four > a {
+  color: rgb(82, 89, 97);
+}*/
+a {
+  font-family: "Open Sans", cursive;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(162, 182, 194);
+}
+
+a:hover {
+  color: rgb(197, 214, 224);
+}
+
+.blog {
+  margin-left: 2rem;
+  width: 70rem;
+  max-width: 1140px;
+  margin: auto;
+}
+.header-image {
+  height: 20rem;
+}
+img {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+}
+
+p {
+  font-style: italic;
+}
+
+.space {
+  height: 100vh;
+  z-index: -1;
+}
+
+.space > img {
+  box-shadow: rgb(8, 8, 8);
+}
+.hubble-heading {
+  color: aliceblue;
+  position: absolute;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+  text-shadow: black;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.space-sub-heading {
+  background: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 0 5px 0 5px;
+  text-shadow: black;
+  letter-spacing: 1.5px;
+}
+
+.space-conatiner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  padding: 1rem;
+  background: url(/images/space_zi54yy_c_scale,w_320.jpg) no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 10px) {
+  .space-hamburger-menu {
+    width: 100%;
+    height: 55vh;
+    background-color: #2a2138;
+    flex-direction: column;
+    position: absolute;
+    color: azure;
+    left: 0;
+    top: 0;
+  }
+  .icon-space {
+    font-size: 2rem;
+    width: 1.2rem;
+    margin-right: 1rem;
+    text-align-last: center;
+  }
+  .space-menu > div {
+    width: 12rem;
+    height: 0;
+    font-size: 1.5rem;
+    display: inline-block;
+  }
+
+  .space-option {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .space-hamburger-menu {
+    height: 35vh;
+  }
+  .email {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 862px) {
+  .space-hamburger-menu {
+    height: 15vh;
+  }
+
+  .email {
+    display: block;
+  }
+
+  .space-option {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .space-hamburger-menu {
+    width: 30rem;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #2a2138;
+    color: azure;
+    font-size: 1.5rem;
+  }
+  .space-menu > div {
+    width: 30rem;
+    height: 2rem;
+    justify-self: center;
+    box-sizing: border-box;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .space-conatiner {
+    background: url(/images/space_zi54yy_c_scale,w_949.jpg) no-repeat;
+    background-size: cover;
+  }
+  .hubble-heading {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .space-conatiner {
+    background: url(/images/space_zi54yy_c_scale,w_1407.jpg) no-repeat;
+    background-size: cover;
+  }
+  .hubble-heading {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .space-conatiner {
+    background: url(/images/space.jpg) no-repeat;
+    background-size: cover;
+  }
+  .hubble-heading {
+    font-size: 2rem;
+  }
+}
+
+/*.user {
+  z-index: 3;
+  width: 100px;
+  height: 50px;
+  position: inherit;
+}*/
+
+.space-option {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 3rem;
+}
+.space-option:hover {
+  background-color: #847c8f;
+}
+
+.icon-space {
+  width: 1.2rem;
+  margin-right: 2rem;
+  text-align-last: center;
 }
